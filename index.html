@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Control</title>
+    <script src="https://kit.fontawesome.com/f4212fdf6f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="view-sensor">
+        <h1>Distance :</h1>
+        <h1 id="data">0</h1>
+    </div>
+
+    <div class="wrapper">
+        <h1>API Control</h1>
+        <div class="remote">
+            <i onclick="sendRequest('http://192.168.0.123/forward')" class="fa-solid fa-caret-up btn-remote"></i>
+            <div class="navi">
+                <i onclick="sendRequest('http://192.168.0.123/left')" class="fa-solid fa-caret-left btn-remote"></i>
+                <i onclick="sendRequest('http://192.168.0.123/stop')" class="fa-solid fa-circle-stop"></i>
+                <i onclick="sendRequest('http://192.168.0.123/right')"
+                    class="fa-solid fa-caret-left fa-rotate-180 btn-remote"></i>
+            </div>
+            <i onclick="sendRequest('http://192.168.0.123/backward')" class="fa-solid fa-caret-down btn-remote"></i>
+        </div>
+    </div>
+
+    <script>
+        function sendRequest(url) {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", url, true);
+            xhr.send();
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+html{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.wrapper{
+    background-color:#ccc;
+    min-width: 400px;
+    height: 600px;
+    display: flex;
+    justify-content:center;
+    flex-direction:column;
+    align-items: center;
+    position: relative;
+    border-radius: 10%;
+}
+
+.view-sensor{
+    display: flex;
+}
+
+.view-sensor>h1:first-child{
+    margin-right: 10px;
+}
+
+.remote{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 300px;
+    background-color: rgb(119, 135, 130);
+    border-radius:50%;
+}
+
+.navi{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.wrapper>h1{
+    position: absolute;
+    top: 0;
+}
+
+.remote>i,
+.navi>i{
+    width: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    font-size:50px;
+}
+
+.btn-remote{
+    color: #04fa00;
+}
+
+.fa-circle-stop{
+    color: #e51f33;
+}
+
+i:active{
+    opacity: 0.4;
+}
